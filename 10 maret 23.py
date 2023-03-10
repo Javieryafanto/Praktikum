@@ -7,3 +7,19 @@ nama = input("Masukkan Nama: ")
 nik = input("Masukkan NIK: ")
 jenis_kelamin = input("Masukkan Jenis Kelamin:(ex : Pria/Wanita) ")
 tanggal_lahir = input("Masukkan tanggal lahir (ex : 2020-01-02): ")
+
+CariNama = input("Masukkan nama yang ingin dicari: ")
+
+found = False
+
+for data in user:
+    if data['nama'] == CariNama:
+        print("Nama :", data['nama'])
+        print("NIK :", data['nik'])
+        print("Jenis Kelamin :", data['jenis_kelamin'])
+        print("Tanggal Lahir :", data['tanggal_lahir'])
+        found = True
+        break
+
+if not found:
+    print("Data tidak ada")
